@@ -1,0 +1,103 @@
+#define IF              if(
+#define THEN            ){
+#define ELSE            }else{
+#define ELSEIF          }else if(
+#define ENDIF           }
+#define WHILE           while(
+#define DO              ){
+#define ENDWHILE        }
+#define SWITCH          switch(
+#define CASE(a)         case a:
+#define DEFAULT			default:
+#define BREAK           break;
+#define CONTINUE        continue;
+#define ENDSWITCH       }
+#define FOR             for(
+#define ENDFOR          }
+#define LABEL(n)        n:
+#define GOTO(n)         goto n;
+#define RETURN(n)       return n;
+#define SIZEOF(type)    sizeof(type)
+#define CHAR            char
+#define LONG            long
+#define INT             int
+#define FLOAT           float
+#define DOUBLE			double
+#define VOID			void
+#define TRUE			1
+#define FALSE			0
+#define NEGONE			-1
+#define BEGIN           {
+#define END             }
+#define UCHAR           unsigned char
+#define UINT            unsigned int
+#define ULONG           unsigned long
+#define BYTE			unsigned char
+#define WORD			unsigned short int
+#define DWORD			unsigned int
+#define MAIN            main(INT argc, CHAR *argv[])
+#define START           {
+#define ENDSTART        }
+#define INCLUDE			#include
+#define DEFINE			#define
+//#define _TOCHAR(c)		#@c
+//#define	TOCHAR(c)		_TOCHAR(c)
+#define _TOSTR(n)		#n
+#define TOSTR(n)        _TOSTR(n)
+#define _CONS(x, y)		x##y
+#define CONS(x, y)		_CONS(x, y)
+#define CALL(f, t)      f(t)
+#define STRUCT(type)    typedef struct _tag_##type type;\
+                        struct _tag_##type
+#define ABS(x)          ((x) >= 0 ? (x) : -(x))
+#define MAX(a,b)		((a) >= (b) ? (a) : (b))
+#define MIN(a,b)		((a) >= (b) ? (b) : (a))
+#define WARNING_IF(exp)	\
+do{ \
+	if(exp) \
+	printf("warning: "#exp"\n"); \
+}while(0)
+#define PI              3.141592653589
+#define idebug(x)		printf(#x" = %d\n", (x));
+#define cdebug(y)		printf(#y" = %c\n", (y));
+#define sdebug(z)		printf(#z" = %s\n", (z));
+#define fdebug(w)		printf(#w" = %f\n", (w));
+#define ldebug(v)		printf(#v" = %ld\n", (v));
+#define debug(t, x)		t##debug(x)
+#define ARRY_SIZE(a)	(sizeof(a) / sizeof(a[0]))
+#define B_PTR(var)		((BYTE *)(void *)&(var))
+#define W_PTR(var)		((WORD *)(void *)&(var))
+#define MEM_B(x)		(*((BYTE *)(x)))
+#define MEM_W(x)		(*((WORD *)(x)))
+#define INC_SAT(val)	((val) = ((val)+1 > (val)) ? (val)+1 : (val))
+#define HEXCHK(c)		(((c) >= '0' && (c) <= '9') \
+					 || ((c) >= 'A' && (c) <= 'F')  \
+					 || ((c) >= 'a' && (c) <= 'f'))
+#define DECCHK(c)		((c) >= '0' && (c) <= '9')
+#define TOLOWER(ch)		((ch) & (1 << 5) ? (ch) : ((ch) + 'a' - 'A'))
+#define TOUPPER(ch)		((ch) & (1 << 5) ? ((ch) - 'a' + 'A') : (ch))
+#define ISALPABET(ch)	((ch) >= 'A' && (ch) <= 'Z' || (ch) >= 'a' && (ch) <= 'z')		
+#define BEGIN_EXTERN_C \	
+#ifndef __cplusplus \
+extern "C" { \
+#endif
+#define END_EXTERN_C \
+#ifndef __cplusplus \
+} \
+#endif
+#define MALLOC(n,type)	((type *)malloc((n)*sizeof(type)))
+#define HELLO(linuxfor)	printf("hello "#linuxfor"\n");
+#define PRINT			printf
+#define SWAP(x, y) \
+{ \
+	x ^= y; \
+	y ^= x; \
+	x ^= y; \
+}
+//#define SWAP(a, b) \
+//{ \
+//		a += b; \
+//		b = a - b; \
+//		a -= b; \
+//}
+#define PAUSE	getchar();

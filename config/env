@@ -1,0 +1,10 @@
+~
+~	This configuration file is only for Linuxfor Innovator environment
+~
+~	Author 	:		shell eva
+~   Contact	:		linuxfor@163.com
+~	Date	:		03/14/2015
+~
+~ 	comments:	~ or QHP
+~ language=en		QHP default character set for Linuxfor Innovator to display
+language=zh			QHP select a character set for display
